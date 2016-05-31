@@ -1,4 +1,4 @@
-LOCAL_PATH := device/samsung/gts210ltexx
+LOCAL_PATH := device/samsung/gts28wifi
 
 ###########################################################
 ### FLAT DEVICE TREE
@@ -6,21 +6,6 @@ LOCAL_PATH := device/samsung/gts210ltexx
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dtb.img:dt.img
-
-###########################################################
-### RAMDISK
-###########################################################
-
-PRODUCT_PACKAGES += \
-    init.baseband.rc
-
-###########################################################
-### RADIO
-###########################################################
-
-# cpboot-daemon for modem
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ril/sbin/cbd:root/sbin/cbd
 
 ###########################################################
 ### AUDIO
@@ -37,4 +22,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/samsung/gts210ltexx/gts210ltexx-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/gts210ltexx/gts28wifi-vendor.mk)
