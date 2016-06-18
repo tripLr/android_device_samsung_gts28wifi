@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter gts28wifi, $(TARGET_DEVICE)),)
+ifneq ($(filter gts28wifi gts28wifixx, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
