@@ -8,6 +8,8 @@ TARGET_KERNEL_CONFIG := cm_exynos5433-gts28wifi_defconfig
 
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := gts28wifi,gts28wifixx
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
