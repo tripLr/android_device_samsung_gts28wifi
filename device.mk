@@ -1,26 +1,20 @@
 LOCAL_PATH := device/samsung/gts28wifi
 
-###########################################################
-### RAMDISK
-###########################################################
-
+# Ramdisk
 PRODUCT_PACKAGES += \
-    init.baseband.rc
+    ueventd.universal5433.rc
 
-###########################################################
-### AUDIO
-###########################################################
-
+# Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
+    $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
 
-###########################################################
-### BLUETOOTH
-###########################################################
-
+# Bluetooth
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+	device/samsung/gts28wifi/overlay
+	
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/samsung/gts28wifi/gts28wifi-vendor.mk)
+$(call inherit-product, vendor/samsung/gts28wifi/gts28wifi-vendor.mk)
