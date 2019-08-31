@@ -16,5 +16,9 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
 	device/samsung/gts28wifi/overlay
 	
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2018-06-01
+
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/gts28wifi/gts28wifi-vendor.mk)

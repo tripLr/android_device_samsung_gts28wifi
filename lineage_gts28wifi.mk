@@ -32,6 +32,6 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_BUILD_PROP_OVERRIDES += \
   PRODUCT_NAME=gts28wifi \
   TARGET_DEVICE=gts28wifi \
-  PRIVATE_BUILD_DESC="gts28wifixx-user 7.0 NRD90M T710XXU2DRB1 release-keys"
+  PRIVATE_BUILD_DESC="gts28wifixx-user 7.0 NRD90M T710XXU2DRK1 release-keys"
 
-BUILD_FINGERPRINT := samsung/gts28wifixx/gts28wifi:7.0/NRD90M/T710XXU2DRB1:user/release-keys
+BUILD_FINGERPRINT := samsung/gts28wifixx/gts28wifi:7.0/NRD90M/T710XXU2DRK1:user/release-keys
