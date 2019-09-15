@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_gts28wifi.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_gts28wifi-user \
+    lineage_gts28wifi-userdebug \
+    lineage_gts28wifi-eng
