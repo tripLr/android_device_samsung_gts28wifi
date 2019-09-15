@@ -12,6 +12,13 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 # Properties
 #TARGET_VENDOR_PROP := device/samsung/gts28wifi/vendor.prop
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
+# RIL
+BOARD_MODEM_TYPE := m7450
+BOARD_PROVIDES_LIBRIL := true
+
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := gts28wifi,gts28wifixx
 
